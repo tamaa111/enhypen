@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* scroll */
+html::-webkit-scrollbar {
+    width: .6rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #191818;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+
+/* header */
+.header {
+    min-height: 20vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(252, 252, 252, 0.7));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 5%;
+}
+
+.header1 {
+    background: linear-gradient(rgb(40, 45, 57), rgb(13, 13, 13));
+}
+
+.header-1 {
+    background: black;
+    z-index: 4;
+    background-image: linear-gradient(rgb(40, 45, 57), rgb(13, 13, 13));
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+
+.header2 {
+    background: url("/images/music/background.jpeg");
+}
+
+.header-2 {
+    background: black;
+    background: url("/images/music/background.jpeg");
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav img {
+    width: 70px;
+    margin-left: 50%;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-right: 3%;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: red;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        margin-right: 0%;
+    }
+
+    nav img {
+        width: 50px;
+    }
+
+    nav .fa {
+        display: block;
+        color: rgb(235, 241, 233);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+
+/* iframe  embed*/
+.embed {
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+/* music */
+.music {
+    margin-left: 5%;
+    padding-top: 5%;
+    /* text-align: center; */
+}
+
+.music h1 {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 70px;
+}
+
+
+.music .col-gambar {
+    color: #000000;
+    font-size: 60px;
+    padding-bottom: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+
+.music div {
+    display: flex;
+    align-items: center;
+}
+
+
+.music .row .col-gambar img {
+    width: 40%;
+}
+
+.music .row .col-gambar2 img {
+    width: 80%;
+    padding-left: 10%;
+}
+
+
+
+
+@media(max-width: 700px) {
+    .music {
+        margin-left: 0%;
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .music h1 {
+        margin-top: 20px;
+        padding-bottom: 30px;
+        text-align: center;
+        font-size: 45px;
+    }
+
+    .music div {
+        display: block;
+        align-items: center;
+    }
+
+    .music .row .col-gambar img {
+        width: 100%;
+    }
+
+    .music .row .col-gambar2 img {
+        padding-left: 0%;
+        width: 70%;
+    }
+
+}
+
+
+/* music1 */
+.music1 {
+    padding-top: 8%;
+    text-align: center;
+    color: white;
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+.music1 img {
+    margin: 0 auto;
+    width: 45%;
+    padding-bottom: 3%;
+    display: flex;
+}
+
+.lyrics {
+    color: white;
+}
+
+.lyrics h1 {
+    font-size: 70px;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+
+.lyrics p {
+    font-size: 30px;
+    padding: 1% 0% 0% 10%;
+    color: white;
+    text-decoration: none;
+}
+
+.photo h1 {
+    color: white;
+    font-size: 70px;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+
+.photo-row {
+    max-width: 500px
+}
+
+.photo-row img {
+    width: 100%;
+    padding: 10% 0% 10% 40%;
+}
+
+@media(max-width: 700px) {
+    .music1 {
+        padding-top: 20%;
+        text-align: center;
+        color: white;
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .music1 img {
+        padding-bottom: 5%;
+        width: 100%;
+    }
+
+    .music1 p {
+        font-size: 13px;
+    }
+
+    .lyrics h1 {
+        font-size: 30px;
+
+    }
+
+    .lyrics p {
+        font-size: 13px;
+    }
+
+    .photo h1 {
+        font-size: 30px;
+    }
+
+    .photo-row img {
+        width: 80%;
+        padding: 5% 0% 10% 10%;
+    }
+}
+
+
+/* music 1 lirik */
+
+
+.lyrics1 h1 {
+    font-size: 70px;
+    padding-left: 10%;
+    color: black;
+}
+
+.lyrics1 p {
+    font-size: 40px;
+    padding: 1% 0% 0% 11%;
+    text-decoration: none;
+    color: black;
+}
+
+.lirik {
+    font-size: 20px;
+    padding-left: 10%;
+    padding-top: 25px;
+    padding-bottom: 3%;
+    font-weight: 500;
+}
+
+.lirik p {
+    padding-bottom: 3%;
+}
+
+@media(max-width: 700px) {
+    .lyrics1 h1 {
+        font-size: 30px;
+
+    }
+
+    .lyrics1 p {
+        font-size: 20px;
+    }
+
+    .lirik {
+        font-size: 13px;
+    }
+}
+
+/* footer */
+
+.footer {
+    background: #000000;
+}
+
+.footer .row {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: baseline;
+}
+
+.footer .row .col i {
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    border: .1rem solid rgb(255, 255, 255);
+    margin: .2.5rem;
+    border-radius: 50%;
+}
+
+.footer .row .col img {
+    justify-items: left;
+    width: 18%;
+}
+
+
+.footer .row .col i:hover {
+    color: #000000;
+    background: rgb(255, 255, 255);
+}
+
+.footer .col {
+    flex-basis: 48%;
+    font-size: 14px;
+    color: white;
+    padding-left: 20px;
+}
+
+.footer .col address {
+    padding-top: 20px;
+}
+
+
+@media(max-width: 700px) {
+    .footer .row {
+        flex-direction: column;
+    }
+
+    .footer .row .col {
+        margin-bottom: 10px;
+        padding-left: 5%;
+    }
+
+    .footer .row .col img {
+        width: 35%;
+        margin-bottom: 10px;
+    }
+
+    .footer .col {
+        font-size: 13px;
+        color: white;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer .row .col i {
+        height: 2rem;
+        width: 2rem;
+        line-height: 2rem;
+        font-size: 1rem;
+        color: rgb(255, 255, 255);
+        border: .1rem solid rgb(255, 255, 255);
+        margin: .2rem;
+        border-radius: 50%;
+    }
+
+}

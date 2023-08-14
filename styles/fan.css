@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* scroll */
+html::-webkit-scrollbar {
+    width: .6rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #191818;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+
+/* header */
+.header {
+    min-height: 20vh;
+    width: 100%;
+    background: #1a222d;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 5%;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav img {
+    width: 70px;
+    margin-left: 50%;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-right: 3%;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: red;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        margin-right: 0%;
+    }
+
+    nav img {
+        width: 50px;
+    }
+
+    nav .fa {
+        display: block;
+        color: rgb(235, 241, 233);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+
+}
+
+/* news */
+.news {
+    padding-top: 10%;
+}
+
+
+
+.news h1 {
+    color: #ffffff;
+    font-size: 70px;
+    /* writing-mode: vertical-lr; */
+    position: fixed;
+    /* padding-left: 10%; */
+}
+
+.news h1:hover {
+    color: #000000;
+}
+
+.news .row {
+    display: flex;
+    justify-content: baseline;
+}
+
+.news .row .col {
+    padding-left: 10%;
+    font-size: 15px;
+    font-weight: 600;
+    padding-right: 5%;
+}
+
+.news .row .col i {
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.news .row .col img {
+    width: 30%;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+
+.news .row .col1 img {
+    width: 30%;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+button {
+    padding: 10% 10% 10% 10%;
+    font-size: 18px;
+    background: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.news .row .col p {
+    margin-bottom: 5%;
+    background: rgb(255, 255, 255);
+    margin-left: 10%;
+    color: rgb(0, 0, 0);
+    padding: 2% 2% 2% 2%;
+    border-radius: 10px;
+}
+
+.news .row .col p #login {
+    padding: 5% 5% 5% 5%;
+}
+
+.news .row .col p:hover {
+    color: #ffffff;
+    background: rgb(0, 0, 0);
+}
+
+.news .row .col1 {
+    font-size: 20px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.news .row .col1 p {
+    background: white;
+    padding: 3% 5% 0% 5%;
+}
+
+.news .row .col1 .pad {
+    padding-bottom: 5%;
+}
+
+.news .row .col1 .bold {
+    font-weight: bold;
+}
+
+.pad a {
+    font-size: 20px;
+    background-color: rgb(199, 107, 36);
+    color: white;
+    display: inline;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    padding: 1% 1% 1% 1%;
+    float: right;
+    margin-top: 2%;
+}
+
+
+@media(max-width: 700px) {
+    .news {
+        padding-left: 0%;
+        padding-top: 20%;
+        margin-right: 5%;
+    }
+
+    .news h1 {
+        font-size: 50px;
+        writing-mode: horizontal-tb;
+        text-align: center;
+        position: relative;
+    }
+
+    .news .row .col p {
+        margin-left: 0%;
+    }
+
+    .news .row {
+        display: block;
+    }
+
+    .news .row .col {
+        padding-bottom: 8%;
+        font-size: 15px;
+    }
+
+    .news .row .col1 {
+        padding-bottom: 8%;
+        padding-right: 5%;
+        padding-left: 0%;
+    }
+
+    .news .row .col1 p {
+        font-size: 13px;
+
+    }
+
+    .news .row .col img {
+
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 10%;
+    }
+
+    .news .row .col1 img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 10%;
+    }
+
+    .pad a {
+        font-size: 13px;
+        background-color: rgb(199, 107, 36);
+        color: white;
+        display: inline;
+        border-radius: 10px;
+        padding: 1% 1% 1% 1%;
+        float: right;
+        margin-top: 2%;
+    }
+
+    button {
+        padding: 3% 3% 3% 3%;
+        font-size: 13px;
+        background: #000000;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+}
+
+/* footer */
+
+.footer {
+    background: #000000;
+}
+
+.footer .row {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: baseline;
+}
+
+.footer .row .col i {
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    border: .1rem solid rgb(255, 255, 255);
+    margin: .2.5rem;
+    border-radius: 50%;
+}
+
+.footer .row .col img {
+    justify-items: left;
+    width: 18%;
+}
+
+
+.footer .row .col i:hover {
+    color: #000000;
+    background: rgb(255, 255, 255);
+}
+
+.footer .col {
+    flex-basis: 48%;
+    font-size: 14px;
+    color: white;
+    padding-left: 20px;
+}
+
+.footer .col address {
+    padding-top: 20px;
+}
+
+
+@media(max-width: 700px) {
+    .footer .row {
+        flex-direction: column;
+    }
+
+    .footer .row .col {
+        margin-bottom: 10px;
+        padding-left: 5%;
+    }
+
+    .footer .row .col img {
+        width: 35%;
+        margin-bottom: 10px;
+    }
+
+    .footer .col {
+        font-size: 13px;
+        color: white;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer .row .col i {
+        height: 2rem;
+        width: 2rem;
+        line-height: 2rem;
+        font-size: 1rem;
+        color: rgb(255, 255, 255);
+        border: .1rem solid rgb(255, 255, 255);
+        margin: .2rem;
+        border-radius: 50%;
+    }
+
+}
